@@ -15,7 +15,7 @@ Features:
 - post like
 - post unlike
 - analytics about how many likes was made. Example url:
-'''
+```
 /api/analytics/?date_from=2022-12-02&date_to=2022-12-31
-'''
+```
 - user activity an endpoint which shows when user was login last time and when he has made a last request to the service.
