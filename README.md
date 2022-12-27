@@ -2,12 +2,12 @@
 
 ### This is a simple REST API on basis of Django Rest Framework, using JWT for authentication.
 
-Basic models:
+#### Basic models:
 
 - User
 - Post
 
-Features:
+#### Features:
 
 - user signup
 - user login
