@@ -8,7 +8,6 @@ from api.views import JWTAuthenticationView
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("", include("api.urls")),
     path("api/", include("api.urls")),
     path("login/", JWTAuthenticationView.as_view(), name="jwt_token"),
     path("refresh/", TokenRefreshView.as_view(), name="token_refresh"),
