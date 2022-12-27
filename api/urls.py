@@ -7,7 +7,7 @@ from .views import (
     UserViewSet,
     PostViewSet,
     LikeViewSet,
-    ProfileViewSet,
+    ActivitiesViewSet,
     AnalyticsViewSet,
 )
 
@@ -15,7 +15,7 @@ router = routers.DefaultRouter()
 router.register("users", UserViewSet)
 router.register("posts", PostViewSet)
 router.register("likes", LikeViewSet, basename="like")
-router.register("profiles", ProfileViewSet)
+router.register("activities", ActivitiesViewSet)
 router.register("analytics", AnalyticsViewSet, basename="analytics")
 
 urlpatterns = [

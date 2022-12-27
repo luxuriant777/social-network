@@ -94,7 +94,7 @@ class LikeViewSet(viewsets.ModelViewSet):
         return Response(response, status=status.HTTP_400_BAD_REQUEST)
 
 
-class ProfileViewSet(viewsets.ModelViewSet):
+class ActivitiesViewSet(viewsets.ModelViewSet):
     queryset = Profile.objects.all()
     serializer_class = ProfileSerializer
     permission_classes(IsAuthenticatedOrReadOnly)
@@ -157,7 +157,7 @@ class AnalyticsViewSet(viewsets.ViewSet):
             date_to = datetime.datetime.strptime(date_to, "%Y-%m-%d %H:%M:%S")
         except Exception as e:
             response = {
-                "message": "Invalid date format or date is not provided"
+                "message": "Invalid date format."
             }
             return Response(response, status=status.HTTP_400_BAD_REQUEST)
 
