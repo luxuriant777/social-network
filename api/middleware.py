@@ -15,7 +15,7 @@ class UpdateLastActivityMiddleware(object):
         return self.get_response(request)
 
     def process_view(self, request, view_func, view_args, view_kwargs):
-        assert hasattr(request, "user"), "Requires authentication middleware"
+        assert hasattr(request, "user"), "Authentication middleware required"
         user = self.get_jwt_user(request)
         if user.is_authenticated:
             Profile.objects.filter(user__id=user.id).update(
