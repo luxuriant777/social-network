@@ -20,4 +20,4 @@ Features:
 ```
 - user activity - an endpoint which shows when user was login last time and when he has made a last request to the service.
 
-![](./screenshots/Screenshot_1.png)
+![](/screenshots/Screenshot_1.png)
