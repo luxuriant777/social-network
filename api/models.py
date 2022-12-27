@@ -18,7 +18,7 @@ class Post(models.Model):
 
     def number_of_likes(self):
         likes = Like.objects.filter(post=self)
-        return len(likes)
+        return likes.count()
 
 
 class Like(models.Model):
