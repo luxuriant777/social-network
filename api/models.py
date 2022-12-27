@@ -9,11 +9,9 @@ class Profile(models.Model):
 
 
 class Post(models.Model):
-    title = models.CharField(max_length=50, null=False, blank=False)
-    content = models.TextField(null=False, blank=False)
-    author = models.ForeignKey(
-        User, on_delete=models.CASCADE, null=False, blank=False
-    )
+    title = models.CharField(max_length=50)
+    content = models.TextField()
+    author = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.title
@@ -24,12 +22,8 @@ class Post(models.Model):
 
 
 class Like(models.Model):
-    post = models.ForeignKey(
-        Post, on_delete=models.CASCADE, null=False, blank=False
-    )
-    user = models.ForeignKey(
-        User, on_delete=models.CASCADE, null=False, blank=False
-    )
+    post = models.ForeignKey(Post, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     pub_date = models.DateTimeField(auto_now_add=True, blank=True)
 
     class Meta:

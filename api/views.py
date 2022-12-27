@@ -156,9 +156,7 @@ class AnalyticsViewSet(viewsets.ViewSet):
             date_from = datetime.datetime.strptime(date_from, "%Y-%m-%d")
             date_to = datetime.datetime.strptime(date_to, "%Y-%m-%d %H:%M:%S")
         except Exception as e:
-            response = {
-                "message": "Invalid date format."
-            }
+            response = {"message": "Invalid date format."}
             return Response(response, status=status.HTTP_400_BAD_REQUEST)
 
         likes = Like.objects.filter(
